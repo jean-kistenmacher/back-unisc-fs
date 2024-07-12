@@ -78,7 +78,7 @@ public class PedidoController {
     public Response gerarComprovantePDF(@PathParam("id") UUID pedidoId) throws IOException {
         byte[] pdfBytes = pedidoService.gerarComprovantePDF(pedidoId);
         return Response.ok(pdfBytes)
-                .header("Content-Disposition", "attachment; filename=boleto.pdf")
+                .header("Content-Disposition", "attachment; filename=comprovante.pdf")
                 .build();
     }
 

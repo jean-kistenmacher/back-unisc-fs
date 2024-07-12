@@ -145,6 +145,16 @@ public class PedidoService {
                 .setFontSize(12)
                 .setMarginBottom(5));
 
+        document.add(new Paragraph("Poltrona: " + pedido.getPoltrona())
+                .setFont(PdfFontFactory.createFont())
+                .setFontSize(12)
+                .setMarginBottom(5));
+
+        document.add(new Paragraph("Data: " + pedido.getDate())
+                .setFont(PdfFontFactory.createFont())
+                .setFontSize(12)
+                .setMarginBottom(5));
+
         document.add(new Paragraph("Valor: R$" + pedido.getPreco())
                 .setFont(PdfFontFactory.createFont())
                 .setFontSize(12)
